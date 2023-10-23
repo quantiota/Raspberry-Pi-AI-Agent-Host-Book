@@ -53,7 +53,7 @@ This appendix offers an organized breakdown of our Docker stack directory struct
 - `init.yaml`: Initial configuration file.
 - `README.md`: Main documentation for the Docker stack.
 
-### `docker-compose.yaml`
+## `docker-compose.yaml`
 
 The `docker-compose.yaml` file defines multi-container Docker applications using Docker Compose. This configuration file describes services, networks, and volumes for the Docker stack.
 
@@ -112,7 +112,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 
 
 
-### `init.yaml`
+## `init.yaml`
 
 The `init.yaml` file is designed to set up the initial SSL certificate generation using Certbot for your Docker stack. 
 
@@ -128,7 +128,7 @@ The `init.yaml` file is designed to set up the initial SSL certificate generatio
   - Maps the host's letsencrypt directories to the container. These directories store generated SSL certificates and associated configurations.
   - Maps the `./nginx/.well-known/` directory from the host to the `/usr/share/nginx/html/.well-known/` directory inside the container. This directory is often used for domain validation during the SSL certificate generation process.
 
-### `README.md`
+## `README.md`
 
 The `README.md` provides an overview and access details of the Docker services set up in the repository.
 
