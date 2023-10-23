@@ -371,7 +371,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 ##### 1. GPS Tracker
 
-- **Description**: GPS Tracker for  SIM7600G-H 4G HAT
+- **Description**: GPS Tracker for Quectel EG25-G HAT
 - **Datasource**: Postgres (UID: 2Bi8EToVz)
 - **Grid Position**: Height: 19, Width: 24, X: 0, Y: 0
 - **Map Type**: OpenStreetMap
