@@ -468,13 +468,13 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
   - High
 - **Display**: Positioned at grid coordinates x=0, y=10 with a width of 5 units and a height of 8 units.
 
-##### 5. Pressure Timeseries Panel:
+##### 6. Pressure Timeseries Panel:
 - **ID**: 8
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Same as the pressure gauge, retrieves pressure data for the past day.
 - **Display**: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
 
-##### 6. Air Quality Gauge Panel:
+##### 7. Air Quality Gauge Panel:
 - **ID**: 9
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
@@ -495,7 +495,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - **Display**: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
 
 
-##### 6. Air Quality Timeseries Panel:
+##### 8. Air Quality Timeseries Panel:
 - **ID**: 2
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
