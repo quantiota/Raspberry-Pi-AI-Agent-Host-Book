@@ -59,7 +59,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 
 ### Services:
 
-**1. VSCode Service (`vscode`):**
+#### 1. VSCode Service (`vscode`):
 
 - **build**: 
   - `context`: Specifies the directory containing the Dockerfile.
@@ -71,7 +71,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 - **devices**: 
   - Maps I2C and Serial Interfaces inside the container to interact with the BME680 sensor and QUECTEL EG25-G 4G HAT cellular device.
 
-**2. Grafana Service (`grafana`):**
+#### 2. Grafana Service (`grafana`):
 
 - **image**: Uses the `grafana/grafana:9.5.1` Docker image.
 - **ports**: Maps the container's port 3000 to the host's port 3000.
@@ -80,7 +80,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 - **depends_on**: Specifies that the Grafana service depends on the `questdb` service.
 - **environment**: Sets specific environment variables for Grafana configurations.
 
-**3. QuestDB Service (`questdb`):**
+#### 3. QuestDB Service (`questdb`):
 
 - **image**: Uses the `questdb/questdb:7.3` Docker image.
 - **ports**: Maps multiple ports between the container and the host for various QuestDB functionalities.
@@ -88,7 +88,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
   - Mounts the named volume `questdb-data` to the specified path in the container.
 - **environment**: Sets specific environment variables for QuestDB configurations.
 
-**4. Nginx Service (`nginx`):**
+#### 4. Nginx Service (`nginx`):
 
 - **image**: Uses the `nginx:stable` Docker image.
 - **volumes**: 
@@ -98,7 +98,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 - **command**: Executes a command on startup to handle Nginx configurations and then runs Nginx.
 - **depends_on**: Specifies dependencies on other services: `vscode`, `grafana`, and `questdb`.
 
-**5. Certbot Service (`certbot`):**
+#### 5. Certbot Service (`certbot`):
 
 - **image**: Uses the `certbot/certbot` Docker image.
 - **ports**: No ports are mapped.
