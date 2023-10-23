@@ -218,6 +218,64 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### `dashboard-coinbase-matches.json`
 
+# Dashboard Configuration: Coinbase matches ETH BTC
+
+## Overview
+
+- **Title**: Coinbase matches ETH BTC
+- **UID**: MNhO0-aKv
+- **Version**: 3
+- **Refresh Rate**: Every 5 seconds
+- **Schema Version**: 38
+- **Style**: Dark
+- **Tags**: ETH-USD, BTC-USD
+
+## Timeframe
+
+- **From**: The last hour (`now-1h`)
+- **To**: Current time (`now`)
+
+## Annotations
+
+- **Name**: Annotations & Alerts
+- **Datasource**: Grafana (UID: -- Grafana --)
+- **Icon Color**: rgba(0, 211, 255, 1)
+- **Limit**: 100
+- **Type**: Dashboard
+
+## Panels
+
+### 1. Price of ETH and BTC
+
+- **ID**: 2
+- **Description**: Coinbase live data for ETH and BTC
+- **Grid Position**: Height: 17, Width: 24, X: 0, Y: 0
+- **Datasource**: Postgres (UID: 2Bi8EToVz)
+- **Legend**: Displayed at the bottom in list mode
+- **Tooltip**: Single mode without sorting
+- **SQL Queries**:
+  - ETH Price: Extracts the price of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
+  - BTC Price: Extracts the price of BTC from `coinbase_matches` for the last 24 hours, sampling by 1 second.
+
+### 2. Price and Volume of ETH
+
+- **ID**: 3
+- **Grid Position**: Height: 17, Width: 24, X: 0, Y: 17
+- **Datasource**: Postgres (UID: 2Bi8EToVz)
+- **Legend**: Displayed at the bottom in list mode
+- **Tooltip**: Single mode without sorting
+- **SQL Queries**:
+  - ETH Price: Extracts the price of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
+  - ETH Volume: Summarizes the volume of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
+
+## Additional Information
+
+- **Editable**: True
+- **Fiscal Year Start Month**: 0
+- **Graph Tooltip**: 0
+- **Live Now**: False
+
+
 ### `dashboard-coinbase-trades.json`
 
 ### `dashboard-gps-tracker.json`
