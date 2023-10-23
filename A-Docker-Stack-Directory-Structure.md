@@ -1,12 +1,5 @@
 # Appendix A: Docker Stack Directory Structure
 
-- [A.1. Main Directory Structure](#a1-main-directory-structure)
-- [A.2. Grafana Directory](#a2-grafana-directory)
-- [A.3. Nginx Directory](#a3-nginx-directory)
-- [A.4. VSCode Directory](#a4-vscode-directory)
-
-
-
 This appendix offers an organized breakdown of our Docker stack directory structure, delineating the function and organization of each component.
 
 ```
