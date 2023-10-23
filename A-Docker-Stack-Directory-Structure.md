@@ -338,6 +338,55 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### `dashboard-gps-tracker.json`
 
+# GPS Tracker Dashboard Configuration
+
+## General Settings
+
+- **Title**: GPS Tracker
+- **UID**: b771f6fa-e4ad-4df8-a9a5-2c10b67f00f9
+- **Version**: 9
+- **Refresh Rate**: Not specified
+- **Schema Version**: 38
+- **Style**: Dark
+- **Tags**: GPS
+- **Timeframe**:
+  - **From**: Last 6 hours (`now-6h`)
+  - **To**: Current time (`now`)
+- **Editable**: True
+- **Fiscal Year Start Month**: 0
+- **Graph Tooltip**: 0
+- **Live Now**: True
+
+## Annotations
+
+- **Name**: Annotations & Alerts
+- **Datasource**: Grafana (UID: -- Grafana --)
+- **Icon Color**: rgba(0, 211, 255, 1)
+- **Type**: Dashboard
+
+## Panels
+
+### 1. GPS Tracker
+
+- **Description**: GPS Tracker for  SIM7600G-H 4G HAT
+- **Datasource**: Postgres (UID: 2Bi8EToVz)
+- **Grid Position**: Height: 19, Width: 24, X: 0, Y: 0
+- **Map Type**: OpenStreetMap
+- **Line Color**: Red
+- **Point Color**: Royal Blue
+- **Max Data Points**: 500
+- **SQL Queries**:
+  - Latitude Data: Extracts the latitude data from `gps_data` for the last 24 hours.
+  - Longitude Data: Extracts the longitude data from `gps_data` for the last 24 hours.
+
+## Additional Information
+
+- **Editable**: True
+- **Fiscal Year Start Month**: 0
+- **Graph Tooltip**: 0
+- **Live Now**: True
+
+
 ### `dashboard-weather-station.json`
 
 
