@@ -278,6 +278,64 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### `dashboard-coinbase-trades.json`
 
+# Coinbase Trades Dashboard Configuration
+
+## General Settings
+
+- **Title**: Coinbase trades ETH BTC
+- **UID**: MNhO0-aVk
+- **Version**: 58
+- **Refresh Rate**: 5s
+- **Schema Version**: 38
+- **Style**: Dark
+- **Tags**: ETH-USD, BTC-USD
+- **Timeframe**:
+  - **From**: Last hour (`now-1h`)
+  - **To**: Current time (`now`)
+- **Editable**: True
+- **Fiscal Year Start Month**: 0
+- **Graph Tooltip**: 0
+- **Live Now**: False
+
+## Annotations
+
+- **Name**: Annotations & Alerts
+- **Datasource**: Grafana (UID: -- Grafana --)
+- **Icon Color**: rgba(0, 211, 255, 1)
+- **Limit**: 100
+- **Type**: Dashboard
+
+## Panels
+
+### 1. Price of ETH and BTC
+
+- **Description**: Coinbase live data for ETH and BTC
+- **Datasource**: Postgres (UID: 2Bi8EToVz)
+- **Grid Position**: Height: 17, Width: 24, X: 0, Y: 0
+- **Legend**: Displayed at the bottom in list mode
+- **Tooltip**: Single mode without sorting
+- **SQL Queries**:
+  - ETH Price: Extracts the price of ETH from `trades` for the last 24 hours, sampling by 1 second.
+  - BTC Price: Extracts the price of BTC from `trades` for the last 24 hours, sampling by 1 second.
+
+### 2. Price and Volume of ETH
+
+- **Grid Position**: Height: 17, Width: 24, X: 0, Y: 17
+- **Datasource**: Postgres (UID: 2Bi8EToVz)
+- **Legend**: Displayed at the bottom in list mode
+- **Tooltip**: Single mode without sorting
+- **SQL Queries**:
+  - ETH Price: Extracts the price of ETH from `trades` for the last 24 hours, sampling by 1 second.
+  - ETH Volume: Summarizes the volume of ETH from `trades` for the last 24 hours, sampling by 1 second.
+
+## Additional Information
+
+- **Editable**: True
+- **Fiscal Year Start Month**: 0
+- **Graph Tooltip**: 0
+- **Live Now**: False
+
+
 ### `dashboard-gps-tracker.json`
 
 ### `dashboard-weather-station.json`
