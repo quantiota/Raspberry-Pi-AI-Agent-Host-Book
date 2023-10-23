@@ -388,7 +388,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 
 ### `dashboard-weather-station.json`
-
+# Weather Station Dashboard Configuration
 
 The provided JSON is a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
 
