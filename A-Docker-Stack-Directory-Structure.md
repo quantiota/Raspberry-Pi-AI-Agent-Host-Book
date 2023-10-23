@@ -216,9 +216,9 @@ This section elaborates on each individual service, including relevant links, ac
 
 - `README.md`: Documentation for the Grafana directory.
 
-### `dashboard-coinbase-matches.json`
+# `dashboard-coinbase-matches.json`
 
-# Dashboard Configuration: Coinbase matches ETH BTC
+## Dashboard Configuration: Coinbase matches ETH BTC
 
 ## Overview
 
