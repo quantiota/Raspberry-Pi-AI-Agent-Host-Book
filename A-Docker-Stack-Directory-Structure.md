@@ -216,11 +216,11 @@ This section elaborates on each individual service, including relevant links, ac
 
 - `README.md`: Documentation for the Grafana directory.
 
-# `dashboard-coinbase-matches.json`
+## `dashboard-coinbase-matches.json`
 
-## Dashboard Configuration: Coinbase matches ETH BTC
+### Dashboard Configuration: Coinbase matches ETH BTC
 
-## Overview
+#### Overview
 
 - **Title**: Coinbase matches ETH BTC
 - **UID**: MNhO0-aKv
@@ -230,12 +230,12 @@ This section elaborates on each individual service, including relevant links, ac
 - **Style**: Dark
 - **Tags**: ETH-USD, BTC-USD
 
-## Timeframe
+#### Timeframe
 
 - **From**: The last hour (`now-1h`)
 - **To**: Current time (`now`)
 
-## Annotations
+#### Annotations
 
 - **Name**: Annotations & Alerts
 - **Datasource**: Grafana (UID: -- Grafana --)
@@ -243,9 +243,9 @@ This section elaborates on each individual service, including relevant links, ac
 - **Limit**: 100
 - **Type**: Dashboard
 
-## Panels
+#### Panels
 
-### 1. Price of ETH and BTC
+##### 1. Price of ETH and BTC
 
 - **ID**: 2
 - **Description**: Coinbase live data for ETH and BTC
@@ -257,7 +257,7 @@ This section elaborates on each individual service, including relevant links, ac
   - ETH Price: Extracts the price of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
   - BTC Price: Extracts the price of BTC from `coinbase_matches` for the last 24 hours, sampling by 1 second.
 
-### 2. Price and Volume of ETH
+##### 2. Price and Volume of ETH
 
 - **ID**: 3
 - **Grid Position**: Height: 17, Width: 24, X: 0, Y: 17
@@ -268,7 +268,7 @@ This section elaborates on each individual service, including relevant links, ac
   - ETH Price: Extracts the price of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
   - ETH Volume: Summarizes the volume of ETH from `coinbase_matches` for the last 24 hours, sampling by 1 second.
 
-## Additional Information
+#### Additional Information
 
 - **Editable**: True
 - **Fiscal Year Start Month**: 0
