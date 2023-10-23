@@ -134,17 +134,17 @@ The `README.md` provides an overview and access details of the Docker services s
 
 ---
 
-#### **Docker Overview**
+### Docker Overview
 
 In this section, a brief overview is given about the Docker services present within the directory.
 
 ---
 
-#### **Services**
+#### Services
 
 This section elaborates on each individual service, including relevant links, access details, and configuration instructions.
 
-**1. VSCode Service:**
+##### 1. VSCode Service:
 
 - **Docker Image**: [codercom/code-server on Docker Hub](https://hub.docker.com/r/codercom/code-server)
   
@@ -160,7 +160,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 ---
 
-**2. QuestDB Service:**
+##### 2. QuestDB Service:
 
 - **Docker Image**: [questdb/questdb on Docker Hub](https://hub.docker.com/r/questdb/questdb)
   
@@ -178,7 +178,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 ---
 
-**3. Grafana Service:**
+##### 3. Grafana Service:
 
 - **Docker Image**: [grafana/grafana on Docker Hub](https://hub.docker.com/r/grafana/grafana)
   
