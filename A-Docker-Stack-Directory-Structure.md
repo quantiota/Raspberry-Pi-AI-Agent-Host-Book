@@ -426,7 +426,22 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - Display: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
 
 **Temperature Gauge Panel:**
-- [Details analogous to the Humidity Gauge, but for temperature.]
+- ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 4]
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves temperature data from the weather_data table for the past day.
+- Thresholds:
+  - 0°C (Blue)  [Cold]
+  - 20°C (Green)  [Comfortable]
+  - 30°C (Yellow)  [Warm]
+  - 40°C (Red)  [Hot]
+- Mapping: Temperature levels are classified as:
+  - Very Cold
+  - Cold
+  - Comfortable
+  - Warm
+  - Very Hot
+- Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
+
 
 **Temperature Timeseries Panel:**
 - ID: 9
@@ -456,7 +471,25 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - Display: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
 
 **Air Quality Gauge Panel:**
-- [Details analogous to the Humidity Gauge, but for air quality.]
+- ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 9]
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves air quality data from the weather_data table for the past day.
+- Thresholds:
+  - 0-50 (Green)  [Good]
+  - 51-100 (Yellow)  [Moderate]
+  - 101-150 (Orange)  [Unhealthy for Sensitive Groups]
+  - 151-200 (Red)  [Unhealthy]
+  - 201-300 (Purple)  [Very Unhealthy]
+  - 300+ (Maroon)  [Hazardous]
+- Mapping: Air quality levels based on AQI (Air Quality Index) are classified as:
+  - Good
+  - Moderate
+  - Unhealthy for Sensitive Groups
+  - Unhealthy
+  - Very Unhealthy
+  - Hazardous
+- Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
+
 
 **Air Quality Timeseries Panel:**
 - ID: 10
