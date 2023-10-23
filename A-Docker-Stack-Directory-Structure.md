@@ -57,7 +57,7 @@ This appendix offers an organized breakdown of our Docker stack directory struct
 
 The `docker-compose.yaml` file defines multi-container Docker applications using Docker Compose. This configuration file describes services, networks, and volumes for the Docker stack.
 
-#### Services:
+### Services:
 
 **1. VSCode Service (`vscode`):**
 
@@ -105,7 +105,7 @@ The `docker-compose.yaml` file defines multi-container Docker applications using
 - **volumes**: 
   - Mounts directories related to SSL certificates and letsencrypt configurations.
 
-#### Volumes:
+### Volumes:
 
 - **grafana-data**: Named volume for persisting Grafana data.
 - **questdb-data**: Named volume for persisting QuestDB data.
