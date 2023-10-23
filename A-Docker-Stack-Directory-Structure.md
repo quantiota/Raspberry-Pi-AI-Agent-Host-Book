@@ -280,7 +280,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### Coinbase Trades Dashboard Configuration
 
-#### General Settings
+#### Overview
 
 - **Title**: Coinbase trades ETH BTC
 - **UID**: MNhO0-aVk
@@ -289,13 +289,15 @@ This section elaborates on each individual service, including relevant links, ac
 - **Schema Version**: 38
 - **Style**: Dark
 - **Tags**: ETH-USD, BTC-USD
-- **Timeframe**:
-  - **From**: Last hour (`now-1h`)
-  - **To**: Current time (`now`)
 - **Editable**: True
 - **Fiscal Year Start Month**: 0
 - **Graph Tooltip**: 0
 - **Live Now**: False
+
+#### Timeframe
+  - **From**: Last hour (`now-1h`)
+  - **To**: Current time (`now`)
+
 
 #### Annotations
 
@@ -340,7 +342,7 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### GPS Tracker Dashboard Configuration
 
-#### General Settings
+#### Overview
 
 - **Title**: GPS Tracker
 - **UID**: b771f6fa-e4ad-4df8-a9a5-2c10b67f00f9
@@ -349,13 +351,14 @@ This section elaborates on each individual service, including relevant links, ac
 - **Schema Version**: 38
 - **Style**: Dark
 - **Tags**: GPS
-- **Timeframe**:
-  - **From**: Last 6 hours (`now-6h`)
-  - **To**: Current time (`now`)
 - **Editable**: True
 - **Fiscal Year Start Month**: 0
 - **Graph Tooltip**: 0
 - **Live Now**: True
+
+#### Timeframe
+  - **From**: Last 6 hours (`now-6h`)
+  - **To**: Current time (`now`)
 
 #### Annotations
 
@@ -388,22 +391,23 @@ This section elaborates on each individual service, including relevant links, ac
 
 
 ## `dashboard-weather-station.json`
+
 ### Weather Station Dashboard Configuration
 
 The provided JSON is a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
 
-**Dashboard Information:**
-- Title: Weather Station Template BME680
-- UID: d6dcc3ec-ef11-4d34-9fd3-bd8042ccf350
-- Version: 71
-- Refresh Rate: Every 1 minute
-- Time Range: Last 24 hours
-- Style: Dark
-- Tags: Weather Station, BME680
+ ### Overview
+- **Title**: Weather Station Template BME680
+- **UID**: d6dcc3ec-ef11-4d34-9fd3-bd8042ccf350
+- **Version**: 71
+- **Refresh Rate**: Every 1 minute
+- **Time Range**: Last 24 hours
+- **Style**: Dark
+- **Tags**: Weather Station, BME680
 
-**Panels:**
+#### Panels:
 
-**Humidity Gauge Panel:**
+##### Humidity Gauge Panel:
 - ID: 3
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves humidity data from the weather_data table for the past day.
@@ -419,13 +423,13 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
   - Very Humid
 - Display: Positioned at grid coordinates x=12, y=5 with a width of 4 units and a height of 5 units.
 
-**Humidity Timeseries Panel:**
+##### Humidity Timeseries Panel:
 - ID: 5
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Same as the gauge, retrieves humidity data for the past day.
 - Display: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
 
-**Temperature Gauge Panel:**
+##### Temperature Gauge Panel:
 - ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 4]
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves temperature data from the weather_data table for the past day.
@@ -443,13 +447,13 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
 
 
-**Temperature Timeseries Panel:**
+##### Temperature Timeseries Panel:
 - ID: 9
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves temperature data from the weather_data table for the past day.
 - Display: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
 
-**Pressure Gauge Panel:**
+##### Pressure Gauge Panel:
 - ID: 7
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves pressure data from the weather_data table for the past day.
@@ -464,13 +468,13 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
   - High
 - Display: Positioned at grid coordinates x=0, y=10 with a width of 5 units and a height of 8 units.
 
-**Pressure Timeseries Panel:**
+##### Pressure Timeseries Panel:
 - ID: 8
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Same as the pressure gauge, retrieves pressure data for the past day.
 - Display: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
 
-**Air Quality Gauge Panel:**
+##### Air Quality Gauge Panel:
 - ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 9]
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves air quality data from the weather_data table for the past day.
@@ -491,7 +495,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
 
 
-**Air Quality Timeseries Panel:**
+##### Air Quality Timeseries Panel:
 - ID: 10
 - Data Source: Postgres with UID "2Bi8EToVz"
 - SQL Query: Retrieves air quality data from the weather_data table for the past day.
