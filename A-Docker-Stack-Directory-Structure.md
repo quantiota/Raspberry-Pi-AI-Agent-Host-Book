@@ -276,11 +276,11 @@ This section elaborates on each individual service, including relevant links, ac
 - **Live Now**: False
 
 
-### `dashboard-coinbase-trades.json`
+## `dashboard-coinbase-trades.json`
 
-# Coinbase Trades Dashboard Configuration
+### Coinbase Trades Dashboard Configuration
 
-## General Settings
+#### General Settings
 
 - **Title**: Coinbase trades ETH BTC
 - **UID**: MNhO0-aVk
@@ -297,7 +297,7 @@ This section elaborates on each individual service, including relevant links, ac
 - **Graph Tooltip**: 0
 - **Live Now**: False
 
-## Annotations
+#### Annotations
 
 - **Name**: Annotations & Alerts
 - **Datasource**: Grafana (UID: -- Grafana --)
@@ -305,9 +305,9 @@ This section elaborates on each individual service, including relevant links, ac
 - **Limit**: 100
 - **Type**: Dashboard
 
-## Panels
+#### Panels
 
-### 1. Price of ETH and BTC
+##### 1. Price of ETH and BTC
 
 - **Description**: Coinbase live data for ETH and BTC
 - **Datasource**: Postgres (UID: 2Bi8EToVz)
@@ -318,7 +318,7 @@ This section elaborates on each individual service, including relevant links, ac
   - ETH Price: Extracts the price of ETH from `trades` for the last 24 hours, sampling by 1 second.
   - BTC Price: Extracts the price of BTC from `trades` for the last 24 hours, sampling by 1 second.
 
-### 2. Price and Volume of ETH
+##### 2. Price and Volume of ETH
 
 - **Grid Position**: Height: 17, Width: 24, X: 0, Y: 17
 - **Datasource**: Postgres (UID: 2Bi8EToVz)
@@ -328,7 +328,7 @@ This section elaborates on each individual service, including relevant links, ac
   - ETH Price: Extracts the price of ETH from `trades` for the last 24 hours, sampling by 1 second.
   - ETH Volume: Summarizes the volume of ETH from `trades` for the last 24 hours, sampling by 1 second.
 
-## Additional Information
+#### Additional Information
 
 - **Editable**: True
 - **Fiscal Year Start Month**: 0
@@ -336,11 +336,11 @@ This section elaborates on each individual service, including relevant links, ac
 - **Live Now**: False
 
 
-### `dashboard-gps-tracker.json`
+## `dashboard-gps-tracker.json`
 
-# GPS Tracker Dashboard Configuration
+### GPS Tracker Dashboard Configuration
 
-## General Settings
+#### General Settings
 
 - **Title**: GPS Tracker
 - **UID**: b771f6fa-e4ad-4df8-a9a5-2c10b67f00f9
@@ -357,16 +357,16 @@ This section elaborates on each individual service, including relevant links, ac
 - **Graph Tooltip**: 0
 - **Live Now**: True
 
-## Annotations
+#### Annotations
 
 - **Name**: Annotations & Alerts
 - **Datasource**: Grafana (UID: -- Grafana --)
 - **Icon Color**: rgba(0, 211, 255, 1)
 - **Type**: Dashboard
 
-## Panels
+#### Panels
 
-### 1. GPS Tracker
+##### 1. GPS Tracker
 
 - **Description**: GPS Tracker for  SIM7600G-H 4G HAT
 - **Datasource**: Postgres (UID: 2Bi8EToVz)
@@ -379,7 +379,7 @@ This section elaborates on each individual service, including relevant links, ac
   - Latitude Data: Extracts the latitude data from `gps_data` for the last 24 hours.
   - Longitude Data: Extracts the longitude data from `gps_data` for the last 24 hours.
 
-## Additional Information
+#### Additional Information
 
 - **Editable**: True
 - **Fiscal Year Start Month**: 0
@@ -387,8 +387,8 @@ This section elaborates on each individual service, including relevant links, ac
 - **Live Now**: True
 
 
-### `dashboard-weather-station.json`
-# Weather Station Dashboard Configuration
+## `dashboard-weather-station.json`
+### Weather Station Dashboard Configuration
 
 The provided JSON is a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
 
