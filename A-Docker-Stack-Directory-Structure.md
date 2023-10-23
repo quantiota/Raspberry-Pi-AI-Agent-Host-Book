@@ -389,8 +389,8 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### `dashboard-weather-station.json`
 
-```markdown
-The provided JSON seems to be a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
+
+The provided JSON is a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
 
 **Dashboard Information:**
 - Title: Weather Station Template BME680
@@ -465,7 +465,7 @@ The provided JSON seems to be a configuration for a dashboard, likely used in a 
 - Display: Positioned at grid coordinates x=0, y=15 with a width of 24 units and a height of 5 units.
 
 The configuration provides an understanding of how data is fetched from the database, the positioning of the visual elements on the dashboard, and the various thresholds and labels assigned for the visualization.
-```
+
 
 
 ## A.3. Nginx Directory
