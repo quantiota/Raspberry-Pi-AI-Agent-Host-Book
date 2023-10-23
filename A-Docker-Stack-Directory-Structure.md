@@ -389,6 +389,83 @@ This section elaborates on each individual service, including relevant links, ac
 
 ### `dashboard-weather-station.json`
 
+```markdown
+The provided JSON seems to be a configuration for a dashboard, likely used in a tool like Grafana, given the nature and structure of the contents. Here's a summary of its key aspects:
+
+**Dashboard Information:**
+- Title: Weather Station Template BME680
+- UID: d6dcc3ec-ef11-4d34-9fd3-bd8042ccf350
+- Version: 71
+- Refresh Rate: Every 1 minute
+- Time Range: Last 24 hours
+- Style: Dark
+- Tags: Weather Station, BME680
+
+**Panels:**
+
+**Humidity Gauge Panel:**
+- ID: 3
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves humidity data from the weather_data table for the past day.
+- Thresholds:
+  - 30% (Green)
+  - 60% (Yellow)
+  - 80% (Red)
+- Mapping: Humidity levels are classified as:
+  - Very Dry
+  - Dry
+  - Comfortable
+  - Humid
+  - Very Humid
+- Display: Positioned at grid coordinates x=12, y=5 with a width of 4 units and a height of 5 units.
+
+**Humidity Timeseries Panel:**
+- ID: 5
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Same as the gauge, retrieves humidity data for the past day.
+- Display: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
+
+**Temperature Gauge Panel:**
+- [Details analogous to the Humidity Gauge, but for temperature.]
+
+**Temperature Timeseries Panel:**
+- ID: 9
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves temperature data from the weather_data table for the past day.
+- Display: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
+
+**Pressure Gauge Panel:**
+- ID: 7
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves pressure data from the weather_data table for the past day.
+- Thresholds:
+  - 980 (Yellow)
+  - 1000 (Green)
+  - 1025 (Blue)
+- Mapping: Pressure levels are classified as:
+  - Very Low
+  - Low
+  - Normal
+  - High
+- Display: Positioned at grid coordinates x=0, y=10 with a width of 5 units and a height of 8 units.
+
+**Pressure Timeseries Panel:**
+- ID: 8
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Same as the pressure gauge, retrieves pressure data for the past day.
+- Display: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
+
+**Air Quality Gauge Panel:**
+- [Details analogous to the Humidity Gauge, but for air quality.]
+
+**Air Quality Timeseries Panel:**
+- ID: 10
+- Data Source: Postgres with UID "2Bi8EToVz"
+- SQL Query: Retrieves air quality data from the weather_data table for the past day.
+- Display: Positioned at grid coordinates x=0, y=15 with a width of 24 units and a height of 5 units.
+
+The configuration provides an understanding of how data is fetched from the database, the positioning of the visual elements on the dashboard, and the various thresholds and labels assigned for the visualization.
+```
 
 
 ## A.3. Nginx Directory
