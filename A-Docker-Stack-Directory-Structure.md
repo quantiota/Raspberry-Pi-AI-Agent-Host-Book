@@ -454,7 +454,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - **Display**: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
 
 ##### 5. Pressure Gauge Panel:
-- **ID**:** 7
+- **ID**: 7
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves pressure data from the weather_data table for the past day.
 - **Thresholds**:
