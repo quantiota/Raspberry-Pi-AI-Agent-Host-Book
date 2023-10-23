@@ -47,7 +47,7 @@ This appendix offers an organized breakdown of our Docker stack directory struct
 ```
 
 
-## A.1. Main Directory Structure
+# A.1. Main Directory Structure
 
 - `docker-compose.yaml`: Contains the configuration for deploying the Docker services.
 - `init.yaml`: Initial configuration file.
@@ -195,7 +195,7 @@ This section elaborates on each individual service, including relevant links, ac
 ---
 
 
-## A.2. Grafana Directory
+# A.2. Grafana Directory
 
 - `dashboards`: Contains JSON configurations for various Grafana dashboards.
   - `dashboard-coinbase-matches.json`: Dashboard configuration for Coinbase matches.
@@ -501,7 +501,7 @@ The configuration provides an understanding of how data is fetched from the data
 
 
 
-## A.3. Nginx Directory
+# A.3. Nginx Directory
 
 - `.well-known`: Directory for well-known service information.
   - `.gitkeep`: Placeholder file to keep the directory in version control.
@@ -517,7 +517,7 @@ The configuration provides an understanding of how data is fetched from the data
 - `nginx.conf`: Main configuration file for Nginx.
 - `nginx.env`: Environment variables for Nginx.
 
-## A.4. VSCode Directory
+# A.4. VSCode Directory
 
 - `Dockerfile`: Contains instructions for building the VSCode Docker image.
 - `README.md`: Documentation for the VSCode directory.
