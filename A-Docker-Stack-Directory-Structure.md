@@ -407,15 +407,15 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 
 #### Panels:
 
-##### Humidity Gauge Panel:
-- ID: 3
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves humidity data from the weather_data table for the past day.
-- Thresholds:
+##### 1. Humidity Gauge Panel:
+- **ID**: 3
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves humidity data from the weather_data table for the past day.
+- **Thresholds**:
   - 30% (Green)
   - 60% (Yellow)
   - 80% (Red)
-- Mapping: Humidity levels are classified as:
+- **Mapping**: Humidity levels are classified as:
   - Very Dry
   - Dry
   - Comfortable
@@ -423,83 +423,83 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
   - Very Humid
 - Display: Positioned at grid coordinates x=12, y=5 with a width of 4 units and a height of 5 units.
 
-##### Humidity Timeseries Panel:
-- ID: 5
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Same as the gauge, retrieves humidity data for the past day.
-- Display: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
+##### 2. Humidity Timeseries Panel:
+- **ID**: 5
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Same as the gauge, retrieves humidity data for the past day.
+- **Display**: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
 
-##### Temperature Gauge Panel:
-- ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 4]
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves temperature data from the weather_data table for the past day.
+##### 3. Temperature Gauge Panel:
+- **ID**: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 4]
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves temperature data from the weather_data table for the past day.
 - Thresholds:
   - 0°C (Blue)  [Cold]
   - 20°C (Green)  [Comfortable]
   - 30°C (Yellow)  [Warm]
   - 40°C (Red)  [Hot]
-- Mapping: Temperature levels are classified as:
+- **Mapping**: Temperature levels are classified as:
   - Very Cold
   - Cold
   - Comfortable
   - Warm
   - Very Hot
-- Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
+- **Display**: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
 
 
-##### Temperature Timeseries Panel:
-- ID: 9
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves temperature data from the weather_data table for the past day.
-- Display: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
+##### 4. Temperature Timeseries Panel:
+- **ID**: 9
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves temperature data from the weather_data table for the past day.
+- **Display**: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
 
-##### Pressure Gauge Panel:
-- ID: 7
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves pressure data from the weather_data table for the past day.
-- Thresholds:
+##### 5. Pressure Gauge Panel:
+- **ID**:** 7
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves pressure data from the weather_data table for the past day.
+- **Thresholds**:
   - 980 (Yellow)
   - 1000 (Green)
   - 1025 (Blue)
-- Mapping: Pressure levels are classified as:
+- **Mapping**: Pressure levels are classified as:
   - Very Low
   - Low
   - Normal
   - High
-- Display: Positioned at grid coordinates x=0, y=10 with a width of 5 units and a height of 8 units.
+- **Display**: Positioned at grid coordinates x=0, y=10 with a width of 5 units and a height of 8 units.
 
-##### Pressure Timeseries Panel:
-- ID: 8
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Same as the pressure gauge, retrieves pressure data for the past day.
-- Display: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
+##### 5. Pressure Timeseries Panel:
+- **ID**: 8
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Same as the pressure gauge, retrieves pressure data for the past day.
+- **Display**: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
 
-##### Air Quality Gauge Panel:
-- ID: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 9]
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves air quality data from the weather_data table for the past day.
-- Thresholds:
+##### 6. Air Quality Gauge Panel:
+- **ID**: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 9]
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
+- **Thresholds**:
   - 0-50 (Green)  [Good]
   - 51-100 (Yellow)  [Moderate]
   - 101-150 (Orange)  [Unhealthy for Sensitive Groups]
   - 151-200 (Red)  [Unhealthy]
   - 201-300 (Purple)  [Very Unhealthy]
   - 300+ (Maroon)  [Hazardous]
-- Mapping: Air quality levels based on AQI (Air Quality Index) are classified as:
+- **Mapping**: Air quality levels based on AQI (Air Quality Index) are classified as:
   - Good
   - Moderate
   - Unhealthy for Sensitive Groups
   - Unhealthy
   - Very Unhealthy
   - Hazardous
-- Display: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
+- **Display**: Positioned at grid coordinates x=[specific x-coordinate], y=[specific y-coordinate] with a width of [specific width in units] units and a height of [specific height in units] units.
 
 
-##### Air Quality Timeseries Panel:
-- ID: 10
-- Data Source: Postgres with UID "2Bi8EToVz"
-- SQL Query: Retrieves air quality data from the weather_data table for the past day.
-- Display: Positioned at grid coordinates x=0, y=15 with a width of 24 units and a height of 5 units.
+##### 6. Air Quality Timeseries Panel:
+- **ID**: 10
+- **Data Source**: Postgres with UID "2Bi8EToVz"
+- **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
+- **Display**: Positioned at grid coordinates x=0, y=15 with a width of 24 units and a height of 5 units.
 
 The configuration provides an understanding of how data is fetched from the database, the positioning of the visual elements on the dashboard, and the various thresholds and labels assigned for the visualization.
 
