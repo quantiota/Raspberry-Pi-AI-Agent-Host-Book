@@ -430,7 +430,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - **Display**: Positioned at grid coordinates x=16, y=5 with a width of 8 units and a height of 5 units.
 
 ##### 3. Temperature Gauge Panel:
-- **ID**: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 4]
+- **ID**: 4
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves temperature data from the weather_data table for the past day.
 - Thresholds:
@@ -448,7 +448,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 
 
 ##### 4. Temperature Timeseries Panel:
-- **ID**: 9
+- **ID**: 6
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves temperature data from the weather_data table for the past day.
 - **Display**: Positioned at grid coordinates x=0, y=0 with a width of 24 units and a height of 5 units.
@@ -475,7 +475,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 - **Display**: Positioned at grid coordinates x=5, y=10 with a width of 19 units and a height of 8 units.
 
 ##### 6. Air Quality Gauge Panel:
-- **ID**: [A unique identifier, similar to the ID for the Humidity Gauge, e.g., 9]
+- **ID**: 9
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
 - **Thresholds**:
@@ -496,7 +496,7 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 
 
 ##### 6. Air Quality Timeseries Panel:
-- **ID**: 10
+- **ID**: 2
 - **Data Source**: Postgres with UID "2Bi8EToVz"
 - **SQL Query**: Retrieves air quality data from the weather_data table for the past day.
 - **Display**: Positioned at grid coordinates x=0, y=15 with a width of 24 units and a height of 5 units.
