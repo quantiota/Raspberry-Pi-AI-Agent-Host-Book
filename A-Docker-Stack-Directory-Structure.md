@@ -724,6 +724,23 @@ This `nginx.conf` provides the foundational settings for the Nginx server. Any d
 
 - `include /etc/nginx/conf.d/*.conf;`: Includes all configuration files from the specified directory. This is where the `default.conf` would be read from if it exists in the `conf.d` directory.
 
+##  `.htpasswd`
+
+
+- `admin:$apr1$v0Pdxra0$CITSHJVwWQLSZqd5f4cMy0`: 
+
+  - **Username**: `admin`
+  - **Password Hash**: `$apr1$v0Pdxra0$CITSHJVwWQLSZqd5f4cMy0`
+
+  This line represents a user's credentials for Basic Authentication. 
+
+  - The **username** is `admin`.
+  - The **password** is not shown in plain text. Instead, it's stored as an encrypted hash. The hash suggests that the password has been encrypted using the MD5 algorithm, indicated by the `$apr1$` prefix. This is a common practice in `.htpasswd` files to enhance security, so even if someone gains access to the file, they won't be able to decipher the actual password.
+
+By adding entries like this to the `.htpasswd` file, you can secure parts of your QuestDB service with Basic Authentication, requiring a username and password for access.
+
+
+
 
 # A.4. VSCode Directory
 
