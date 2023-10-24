@@ -682,7 +682,37 @@ The default.conf is generated from the default.conf.template by replacing the pl
 
 ## `nginx.conf`
 
+This `nginx.conf` provides the foundational settings for the Nginx server. Any domain-specific configurations would typically be placed in separate files within the `/etc/nginx/conf.d/` directory, as indicated by the last include directive.
 
+## Explainer for `/etc/nginx/nginx.conf`
+
+### General Settings:
+
+- `user nginx;`: Specifies that Nginx should run as the `nginx` user. This is for security purposes to avoid running the server as root.
+  
+- `worker_processes auto;`: This directive specifies how many worker processes should be launched. The `auto` value allows Nginx to auto-detect and set the number of workers to the number of CPU cores available.
+
+- `error_log` and `pid`: These directives define the location for the error log and the process ID file, respectively.
+
+### Events Block:
+
+- `worker_connections 1024;`: Defines the maximum number of simultaneous connections for each worker process. In this configuration, each worker can handle up to 1024 connections.
+
+### HTTP Block:
+
+- `include /etc/nginx/mime.types;`: Includes the MIME type definitions which determine how to respond depending on the file extension of the request.
+
+- `default_type application/octet-stream;`: Sets the default MIME type for responses.
+
+- `log_format main ...`: Specifies the format of the log entries for the access log.
+
+- `access_log ...`: Specifies the location of the access log and uses the previously defined `main` log format.
+
+- `sendfile on;`: Enables or disables the use of sendfile() for sending out file data.
+
+- `keepalive_timeout 65;`: Determines the timeout of keep-alive connections. Here, it's set to 65 seconds.
+
+- `include /etc/nginx/conf.d/*.conf;`: Includes all configuration files from the specified directory. This is where the `default.conf` would be read from if it exists in the `conf.d` directory.
 
 
 # A.4. VSCode Directory
