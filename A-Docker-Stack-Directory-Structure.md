@@ -676,6 +676,17 @@ going to deploy this in production, make sure to review the SSL settings
 for best practices and recent recommendations, as these can change over
 time due to evolving security standards.
 
+
+## `nginx.env`
+
+- `DOMAIN=yourdomain`: This is an environment variable setting. 
+
+  - **Key**: `DOMAIN`
+  - **Value**: `yourdomain`
+  
+  This variable likely serves as a placeholder for the actual domain name that you'd use with your Nginx configurations. When deploying or starting up the Nginx server, the value for `DOMAIN` would replace any instances of `${DOMAIN}` in the configuration templates, such as in `default.conf.template`. By using environment variables, you can dynamically adjust the configurations without having to modify the configuration files directly.
+
+
 ## `default.conf`
 
 The default.conf is generated from the default.conf.template by replacing the placeholder ${DOMAIN} with the desired domain value. This dynamic approach ensures flexibility in configuring different environments or domains using the same template.
@@ -684,7 +695,6 @@ The default.conf is generated from the default.conf.template by replacing the pl
 
 This `nginx.conf` provides the foundational settings for the Nginx server. Any domain-specific configurations would typically be placed in separate files within the `/etc/nginx/conf.d/` directory, as indicated by the last include directive.
 
-## Explainer for `/etc/nginx/nginx.conf`
 
 ### General Settings:
 
