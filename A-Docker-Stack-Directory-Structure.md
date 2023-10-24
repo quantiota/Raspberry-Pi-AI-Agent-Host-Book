@@ -125,13 +125,13 @@ The `init.yaml` file is designed to set up the initial SSL certificate generatio
 
 The `README.md` provides an overview and access details of the Docker services set up in the repository.
 
----
+
 
 ### Docker Overview
 
 In this section, a brief overview is given about the Docker services present within the directory.
 
----
+
 
 #### Services
 
@@ -151,7 +151,7 @@ This section elaborates on each individual service, including relevant links, ac
   
 - **Configuration**: For configuring the VSCode service, refer to the [VSCode documentation](./vscode/README.md).
 
----
+
 
 ##### 2. QuestDB Service:
 
@@ -169,7 +169,7 @@ This section elaborates on each individual service, including relevant links, ac
   - Default credentials are `admin:quest` for the QuestDB service.
   - Further details can be found in the [QuestDB documentation](https://questdb.io/docs/reference/configuration/#postgres-wire-protocol), and the default database name is `qdb`.
 
----
+
 
 ##### 3. Grafana Service:
 
@@ -185,7 +185,7 @@ This section elaborates on each individual service, including relevant links, ac
   
 - **Configuration**: For further configuration details of the Grafana service, see the [Grafana documentation](./grafana/README.md).
 
----
+
 
 
 # A.2. Grafana Directory
