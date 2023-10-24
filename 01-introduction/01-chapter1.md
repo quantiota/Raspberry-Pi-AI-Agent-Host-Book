@@ -76,7 +76,7 @@ The specific test results you will obtain depend on the test cases you execute a
 
 To install the AI Agent Host, follow these steps:
 
-1. Setup DietPi for the Raspberry Pi
+1. Set up DietPi Operating System on the Raspberry Pi
 
 The installation of DietPi consists of few steps:
 
