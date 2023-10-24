@@ -594,6 +594,90 @@ This YAML file details the configuration for integrating Grafana with QuestDB us
 - `nginx.conf`: Main configuration file for Nginx.
 - `nginx.env`: Environment variables for Nginx.
 
+
+
+## `default.conf.template`
+
+This configuration template is for an Nginx web server. Let me break it
+down for you:
+
+1.  ### WebSocket Configuration:
+
+    -   The top-level **map** directive is used to set the appropriate
+        headers for WebSocket connections. If the **Upgrade** HTTP
+        header is set (indicating a WebSocket request), it sets the
+        **Connection** header to **upgrade**. If not, it sets it to
+        **close**.
+
+2.  ### HTTP Server for Redirection:
+
+    -   This server block listens on port 80 (the default HTTP port) and
+        has a server name that matches requests for
+        **vscode.\${DOMAIN}**, **questdb.\${DOMAIN}**, and
+        **grafana.\${DOMAIN}**.
+
+    -   Any request to this server block will be 302 redirected to the
+        corresponding HTTPS (port 443) version of the URL.
+
+    -   It also includes a location block to serve **.well-known** URLs
+        directly, which are typically used for domain validation (e.g.,
+        Let\'s Encrypt).
+
+3.  ### HTTPS Servers:
+
+    -   Three separate server blocks listen on port 443 (the default
+        HTTPS port) and serve the VS Code, QuestDB, and Grafana
+        applications, respectively.
+
+    -   Each server block specifies SSL/TLS settings, including paths to
+        certificate and key files, supported protocols, ciphers, etc.
+
+    -   Strict Transport Security (HSTS) headers are set, which tells
+        browsers to always use HTTPS when connecting to these domains in
+        the future.
+
+    -   Each server block includes a main **location** directive that
+        proxies requests to the respective application\'s backend.
+        Headers to support WebSocket connections are set here, if
+        necessary.
+
+    -   Another **location** block serves the **.well-known** URLs,
+        which, as mentioned before, are used for domain validation.
+
+Specifics to note:
+
+-   ### VS Code:
+
+    -   Requests are proxied to an internal service named **vscode** on
+        port 8080.
+
+-   ### QuestDB:
+
+    -   Requests are proxied to an internal service named **questdb** on
+        port 9000.
+
+    -   Basic authentication is set up for QuestDB with a **.htpasswd**
+        file, which contains user credentials.
+
+-   ### Grafana:
+
+    -   Requests are proxied to an internal service named **grafana** on
+        port 3000.
+
+The configuration uses template placeholders like **\${DOMAIN}**. Before
+deploying this configuration, you would need to replace these
+placeholders with actual values. This dynamic configuration allows for
+easy customization and deployment across different environments or
+domains.
+
+Lastly, the repeated SSL settings across the three server blocks can be
+consolidated into a shared configuration for maintainability. If you\'re
+going to deploy this in production, make sure to review the SSL settings
+for best practices and recent recommendations, as these can change over
+time due to evolving security standards.
+
+
+
 # A.4. VSCode Directory
 
 - `Dockerfile`: Contains instructions for building the VSCode Docker image.
