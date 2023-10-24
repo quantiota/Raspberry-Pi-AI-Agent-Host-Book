@@ -676,6 +676,13 @@ going to deploy this in production, make sure to review the SSL settings
 for best practices and recent recommendations, as these can change over
 time due to evolving security standards.
 
+## `default.conf`
+
+The default.conf is generated from the default.conf.template by replacing the placeholder ${DOMAIN} with the desired domain value. This dynamic approach ensures flexibility in configuring different environments or domains using the same template.
+
+## `nginx.conf`
+
+
 
 
 # A.4. VSCode Directory
