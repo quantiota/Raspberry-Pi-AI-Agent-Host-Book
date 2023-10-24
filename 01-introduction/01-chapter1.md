@@ -77,6 +77,7 @@ The specific test results you will obtain depend on the test cases you execute a
 To test the AI Agent Host, follow these steps:
 
 1. Setup DietPi for the Raspberry Pi
+
 The installation of DietPi consists of few steps:
 
 - Provide the SD card installation media
