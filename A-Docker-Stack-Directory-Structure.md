@@ -791,7 +791,6 @@ In the context of the `nginx` setup, having a `.well-known` directory ensures th
 
 
 
-
 # A.4. VSCode Directory
 
 - `Dockerfile`: Contains instructions for building the VSCode Docker image.
@@ -799,4 +798,42 @@ In the context of the `nginx` setup, having a `.well-known` directory ensures th
 - `requirements.txt`: Lists the requirements for the VSCode Docker image.
 
 
+## `Dockerfile`
 
+
+### Base Image
+- The Docker container will be built from the base image `codercom/code-server` version `4.16.1`. This image provides a setup for running Visual Studio Code inside a container.
+
+### Switch to Root User
+- The current user is switched to `root` to have the necessary permissions to install system packages.
+
+### System Package Installation
+- Updates the package lists and installs the Python development headers and the Python package installer.
+
+### Copying Requirements File
+- The `requirements.txt` file from the host is copied to the `/tmp/` directory inside the container.
+
+### Python Package Installation
+- Python packages specified in the `requirements.txt` file are installed.
+
+### Group and User Modifications
+- A new group called `i2cgroup` with a specified group ID is created.
+- The user `coder` is added to the `i2cgroup`.
+
+### GPS Communication Setup
+- The `coder` user is added to the `dialout` group, which is typically needed for processes that want to communicate with serial devices like GPS modules connected via `/dev/ttyUSB*`.
+
+### Switch to Coder User
+- The current user is switched back to `coder` for security reasons, ensuring that the subsequent commands and processes run with reduced permissions.
+
+### Visual Studio Code Extensions Installation
+- Specific Visual Studio Code extensions related to Jupyter and Python are installed in the container.
+
+In summary, this Dockerfile sets up a development environment with Visual Studio Code, Python, and certain extensions inside a Docker container. It also has configurations for GPS communication and the I2C interface.
+
+
+
+## `requirements.txt`
+
+
+## `README.md`
