@@ -81,7 +81,7 @@ To test the AI Agent Host, follow these steps:
 The installation of DietPi consists of few steps:
 
 - Provide the SD card installation media
-- Get the DietPi image (and put it on the installation media)
+- Get the DietPi image and put it on the installation media
 - Boot up the DietPi device and go through one time installation steps
   
 Following these steps you will be able to initially setup DietPi and install additional software packages you would like to use, using dietpi-software.
