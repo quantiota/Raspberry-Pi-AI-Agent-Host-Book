@@ -739,6 +739,31 @@ This `nginx.conf` provides the foundational settings for the Nginx server. Any d
 
 By adding entries like this to the `.htpasswd` file, you can secure parts of your QuestDB service with Basic Authentication, requiring a username and password for access.
 
+## `dhparam.pem`
+
+In the context of an Nginx setup, you would often see a directive like `ssl_dhparam /path/to/dhparam.pem`; in the server block to utilize the Diffie-Hellman parameters specified in the `dhparam.pem` file.
+
+The `dhparam.pem` file contains Diffie-Hellman parameters. Here's a breakdown:
+
+- **-----BEGIN DH PARAMETERS-----** and **-----END DH PARAMETERS-----**:
+  These delimiters mark the beginning and end of the DH parameters. Anything between these delimiters is the encoded representation of the DH parameters.
+
+- The long encoded string in between is the actual Diffie-Hellman parameter value, which is base64 encoded.
+
+### What are Diffie-Hellman parameters?
+
+Diffie-Hellman (DH) is a method used to securely exchange cryptographic keys over a public network. The `dhparam.pem` file contains the parameters used in this exchange, specifically for the DH key exchange in TLS/SSL communications.
+
+The parameter itself represents a prime number and its length, often 2048, 3072, or 4096 bits, determines the strength of the encryption. The longer the prime, the more secure the key exchange, but it also requires more computational power.
+
+### Why is it important?
+
+When setting up an HTTPS server, it's recommended to generate strong DH parameters to ensure the security of the key exchange process. This avoids certain types of attacks, such as the "Logjam" attack, which targets servers using weak DH parameters.
+
+In practice, once the `dhparam.pem` file is generated, it's typically referenced in the web server's configuration (e.g., Nginx or Apache) to instruct the server to use these parameters during the DH key exchange with clients.
+
+### Note:
+Always keep this file secure, as it's a crucial part of your server's cryptographic setup. While having it exposed doesn't directly compromise your server's private keys, using weak or default parameters can compromise the security of your connections.
 
 
 
