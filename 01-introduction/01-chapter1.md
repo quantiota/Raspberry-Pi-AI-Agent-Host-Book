@@ -1,7 +1,7 @@
 # Raspberry Pi AI Agent Host
 
 
-## Simplified Overview
+## A Simplified Overview of the AI Agent Host
 
  The AI Agent Host can be complex given that it involves several aspects such as AI, edge computing, Docker, and Raspberry Pi. Let me attempt to simplify it:  
 
