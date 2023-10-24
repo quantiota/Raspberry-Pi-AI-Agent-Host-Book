@@ -836,4 +836,51 @@ In summary, this Dockerfile sets up a development environment with Visual Studio
 ## `requirements.txt`
 
 
+The `requirements.txt` file specifies the Python packages required for the application. Each line contains a package name, followed by a double equal sign (`==`), and the desired version number.
+
+### Weather Station Dependencies
+- `#some-weatherstation-package==x.y.z`: This is a commented out package related to a weather station application. It should be uncommented if the application requires this package.
+- `bme680==1.1.1`: This package provides support for the BME680 sensor, which can measure temperature, humidity, pressure, and gas resistance.
+- `psycopg2-binary==2.9.7`: This is a standalone package for PostgreSQL database adapter for Python. It can be used for connecting and executing queries on a PostgreSQL database.
+
+### Healthcare Dependencies
+- `# some-healthcare-package==x.y.z`: This is a commented out package related to healthcare. Uncomment this if the application requires this specific healthcare package.
+
+### GPS Tracker Dependencies
+- `# some-GPStracker-package==x.y.z`: Another commented out package. If GPS tracking features are required, you'd uncomment this.
+- `openrouteservice==2.3.3`: This package provides easy access to the OpenRouteService API, which offers routing, geocoding, and other spatial services.
+- `pyserial==3.5`: This package allows for serial communication (often used for reading data from GPS modules).
+
+### Market Data Dependencies
+- `# some-MarketData-package==x.y.z`: Commented out package related to market data. Uncomment if the application requires this specific market data package.
+- `websocket-client==1.6.3`: This is a package for working with WebSockets, which can provide real-time updates for things like stock market data.
+
+In summary, this `requirements.txt` file lists out the Python packages needed for different applications, some of which are commented out and can be activated as needed based on the specific application requirements.
+
+
 ## `README.md`
+
+
+### VSCode Configuration and Dockerfile
+
+The `Readme.md` describes the process of setting up permissions within a Docker container, especially when dealing with I2C and UART interfaces. The challenge here lies in ensuring correct user permissions because the `coder` user exists only within the Docker container.
+
+#### Steps:
+
+1. **On the Docker Host**:
+
+    - **I2C Interface**:
+        - The objective is to determine the group ID (`gid`) of the **/dev/i2c-1** device on your Docker host.
+
+    - **UART Interface**:
+        - Similarly, you'll need to identify the group associated with the UART interface, specifically devices labeled `/dev/ttyUSB*`.
+
+2. **In the Dockerfile**:
+
+    - After identifying the group ID (`gid`) from the Docker host, you'll need to modify the Docker container setup.
+    - Given that the `coder` user is a part of a pre-existing base image, the steps involve:
+        1. Creating a new group inside the Docker container using the identified `gid`.
+        2. Adding the `coder` user to this new group.
+
+The primary goal of these steps is to bridge the permission disparity between the Docker host and the Docker container. By replicating the group structures inside the container and ensuring the `coder` user is added to the correct groups, it guarantees that the application inside the container has the necessary permissions to interface with the specified devices.
+
