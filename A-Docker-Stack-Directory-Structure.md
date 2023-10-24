@@ -496,6 +496,86 @@ The provided JSON is a configuration for a dashboard, likely used in a tool like
 
 The configuration provides an understanding of how data is fetched from the database, the positioning of the visual elements on the dashboard, and the various thresholds and labels assigned for the visualization.
 
+## `questdb_configuration.png`
+
+### Data Sources / PostgreSQL
+
+**Type:** PostgreSQL
+
+#### Settings
+- **Alerting supported:** ✅
+
+#### PostgreSQL Connection
+- **Name:** QuestDB
+- **Default:** On
+- **Host:** questdb:8812
+- **Database:** qdb
+- **User:** admin
+- **Password:** configured
+- **TLS/SSL Mode:** disable
+
+#### Connection limits
+- **Max open:** unlimited
+- **Max idle:** 2
+- **Max lifetime:** 14400
+
+#### PostgreSQL details
+- **Version:** 9.4
+- **TimescaleDB:** Enabled
+- **Min time interval:** 1m
+
+#### User Permission
+The database user should only be granted `SELECT` permissions on the specified database & tables you want to query. Grafana does not validate that queries are safe so queries can contain any SQL statement. For example, statements like `DELETE FROM user;` and `DROP TABLE user;` would be executed. To protect against this we highly recommend you create a specific PostgreSQL user with restricted permissions. Check out the PostgreSQL Data Source Docs for more information.
+
+#### Status
+- **Database Connection:** OK
+
+
+
+## `file.yaml`
+
+### Grafana Dashboard Provisioning Configuration
+
+This YAML file is a configuration for Grafana's provisioning system:
+
+- `apiVersion`: Specifies the version of the provisioning API.
+  
+- `providers`: A list of ways to source the dashboard configurations.
+  - `name`: A unique name for this provider.
+  - `type`: The type of provider, in this case, it's a file-based provider.
+  - `disableDeletion`: Controls if dashboards can be deleted from the UI. Here, it's set to false, allowing deletion.
+  - `updateIntervalSeconds`: The frequency, in seconds, with which Grafana will scan for changed dashboards.
+  - `allowUiUpdates`: Determines if changes made in the UI are saved. Here, it's set to true.
+  - `options`: Specific options for the file provider:
+    - `path`: The path in the filesystem where the dashboard JSON files are stored.
+    - `foldersFromFilesStructure`: This option, when set to true, allows Grafana to use the filesystem's structure to determine the folder for the dashboard.
+
+
+
+## `questdb.yml`
+
+### Grafana Datasource Configuration for QuestDB
+
+This YAML file details the configuration for integrating Grafana with QuestDB using the PostgreSQL datasource:
+
+- `apiVersion`: Specifies the version of the provisioning API.
+
+- `datasources`: A list of data sources Grafana should connect to.
+  - `name`: Name of the data source, in this case, "QuestDB".
+  - `type`: Specifies that QuestDB is being accessed as a PostgreSQL data source.
+  - `access`: The mode for accessing the data source. "proxy" means requests are forwarded through the Grafana server.
+  - `url`: The connection string to the QuestDB instance.
+  - `database`: The database to connect to, here it is "qdb".
+  - `user`: The user Grafana uses to connect to the database.
+  - `uid`: A unique identifier for this data source, used in the dashboard JSON configurations.
+  - `jsonData`: Additional JSON data for the PostgreSQL configuration:
+    - `postgresVersion`: The version of PostgreSQL being emulated by QuestDB.
+    - `sslmode`: Determines how SSL connections are handled; here, SSL is disabled.
+    - `timescaledb`: Indicates if TimescaleDB extensions are used, set to false for QuestDB.
+  - `secureJsonData`: Contains sensitive data:
+    - `password`: The password for the database connection. Using an environment variable keeps the actual password out of the configuration file, enhancing security.
+
+
 
 
 # A.3. Nginx Directory
