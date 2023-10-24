@@ -646,12 +646,12 @@ down for you:
 
 Specifics to note:
 
--   ### VS Code:
+-   #### VS Code:
 
     -   Requests are proxied to an internal service named **vscode** on
         port 8080.
 
--   ### QuestDB:
+-   #### QuestDB:
 
     -   Requests are proxied to an internal service named **questdb** on
         port 9000.
@@ -659,7 +659,7 @@ Specifics to note:
     -   Basic authentication is set up for QuestDB with a **.htpasswd**
         file, which contains user credentials.
 
--   ### Grafana:
+-   #### Grafana:
 
     -   Requests are proxied to an internal service named **grafana** on
         port 3000.
