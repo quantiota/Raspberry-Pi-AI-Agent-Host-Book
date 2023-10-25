@@ -55,10 +55,10 @@ These features make the AI Agent Host a dynamic, effective, and efficient enviro
  
 :pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/BouarfaMahi/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
 
+Visual Studio Code is remotely connected to a JupyterHub instance installed on a GPU server, providing access to Python, Julia and R kernels. 
 
 
-
-### AI Agent Host: A Novel Approach to Edge Computing
+####  A Novel Approach to Edge Computing
 
 The AI Agent Host offers an innovative setup, connecting edge devices like the Raspberry Pi to a JupyterHub on a remote GPU server. This unique configuration, part of a broader trend known as edge computing, enables real-time data analysis and decision-making on the edge while offloading computationally intensive tasks to a GPU server in the cloud.
 
