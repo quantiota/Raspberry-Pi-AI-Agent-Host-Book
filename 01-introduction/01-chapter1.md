@@ -78,6 +78,8 @@ Please note that while we strive to keep this document up-to-date, the field of 
 
 ## How to set up the AI Agent Host on Raspberry Pi
 
+
+
 The AI Agent Host was tested on DietPi installed on a Raspberry Pi 4 8GB. No other Linux distributions have been tested, but the instructions should be reasonably straightforward to adapt.
 
 When testing the AI Agent Host, you can expect several types of test results depending on the specific aspects you are testing. Here are some common types of test results you might encounter:
@@ -156,7 +158,7 @@ cd Raspberry-Pi-AI-Agent-Host/docker
 ```
 ## Prerequisites
 
-**Note**: A **fully qualified domain name**  (FQDN) is mandatory for running any notebooks from VSCode over **HTTPS**.
+**Note**: A **fully qualified domain name**  (FQDN) is necessary for running any notebooks from VSCode over **HTTPS**.
 
 
 ### 1 Generate Certificates with Certbot
