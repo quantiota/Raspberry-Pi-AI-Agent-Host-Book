@@ -100,7 +100,7 @@ When testing the AI Agent Host, you can expect several types of test results dep
 
 The specific test results you will obtain depend on the test cases you execute and the quality of your Docker Compose configuration. It's important to design and execute a comprehensive set of tests to ensure the reliability, performance, and security of your Dockerized application.
 
-## Installing AI Agent Host
+### Installing AI Agent Host
 
 To install the AI Agent Host, follow these steps:
 
@@ -156,12 +156,12 @@ umask 0022
 cd Raspberry-Pi-AI-Agent-Host/docker
 
 ```
-## Prerequisites
+### Prerequisites
 
 **Note**: A **fully qualified domain name**  (FQDN) is necessary for running any notebooks from VSCode over **HTTPS**.
 
 
-### 1 Generate Certificates with Certbot
+#### 1 Generate Certificates with Certbot
 
 We will use the Certbot Docker image to generate certificates. This service will bind on ports 80 and 443, which are the standard HTTP and HTTPS ports, respectively. It will also bind mount some directories for persistent storage of certificates and challenge responses. 
 
@@ -197,7 +197,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 ```
 
-### 2 Setup Environment Variables
+#### 2 Setup Environment Variables
 
 Firstly, you will want to create an '**.env**' file in the docker folder with the following variables:
 
@@ -228,7 +228,7 @@ Remember to replace the placeholders with your actual domain, passwords, and use
 The environment variables will be replaced directly within the Nginx configuration file when the Docker services are started.
 
 
-### 3 Generate dhparam.pem file
+#### 3 Generate dhparam.pem file
 
 The **dhparam.pem** file is used for Diffie-Hellman key exchange, which is part of establishing a secure TLS connection. You can generate it with OpenSSL. Here's how to generate a 2048-bit key:
 
@@ -238,7 +238,7 @@ sudo openssl dhparam -out ./nginx/certs/dhparam.pem 2048
 
 Generating a dhparam file can take a long time. For a more secure (but slower) 4096-bit key, simply replace 2048 with 4096 in the above command.
 
-### 4 Generate .htpasswd file for QuestDB 
+#### 4 Generate .htpasswd file for QuestDB 
 
 The user/password are the default one: admin:admin
 
@@ -254,7 +254,7 @@ If **htpasswd** is not installed on your system, you can install it with **apt**
 sudo apt-get install apache2-utils
 ```
 
-### 5 Configure the Dockerfile for your specific needs.
+#### 5 Configure the Dockerfile for your specific needs.
 
 When working with Docker, the Dockerfile acts as a blueprint for building containerized applications. While it's possible to utilize a standard or generic Dockerfile, it's often essential to tailor it to your project's unique demands. This is especially true when working with Python applications and their dependencies, or when there's a need to grant specific permissions like access to the [I2C bus](https://github.com/quantiota/Raspberry-Pi-AI-Agent-Host/tree/main/docs/weather-station).
 
@@ -269,7 +269,7 @@ By taking the time to customize your Dockerfile, you ensure that your applicatio
 
 
 
-### 6 Set up device mappings
+#### 6 Set up device mappings
 
 Before initiating your services with Docker Compose, it's crucial to set up device mappings  ([I2C](https://github.com/quantiota/Raspberry-Pi-AI-Agent-Host/tree/main/docs/weather-station), [UART](https://github.com/quantiota/Raspberry-Pi-AI-Agent-Host/tree/main/docs/vehicle-tracking)) especially if any of your services require direct access to hardware devices on the host machine.
 
@@ -288,7 +288,7 @@ Failing to set up this mapping before running **docker compose up** might lead t
 It's essential to map these devices in the Docker Compose configuration **before** launching the service to ensure that the required hardware interactions function seamlessly within the containerized environment.
 
 
-### 7 Launch the AI Agent Host using the provided docker-compose configuration.
+#### 7 Launch the AI Agent Host using the provided docker-compose configuration.
 After completing these steps, you can bring up the Docker stack using the following command:
 
 ```
