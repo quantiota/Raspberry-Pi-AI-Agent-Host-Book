@@ -1,5 +1,6 @@
 # Raspberry Pi AI Agent Host
 
+This chapter delves into the initial steps of working with AI Agent Host. We'll kick off by shedding light on the background of the provided services. From there, we'll guide you on how to get AI Agent Host up and running on your system, followed by its configuration for optimal use. By the conclusion of this chapter, you'll grasp the significance of AI Agent Host, its benefits, and be fully equipped to harness its capabilities.
 
 ## A Simplified Overview of the AI Agent Host
 
