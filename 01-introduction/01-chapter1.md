@@ -98,7 +98,7 @@ When testing the AI Agent Host, you can expect several types of test results dep
 
 The specific test results you will obtain depend on the test cases you execute and the quality of your Docker Compose configuration. It's important to design and execute a comprehensive set of tests to ensure the reliability, performance, and security of your Dockerized application.
 
-## Getting Started
+## Installing AI Agent Host
 
 To install the AI Agent Host, follow these steps:
 
