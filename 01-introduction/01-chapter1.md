@@ -39,6 +39,9 @@ These features make the AI Agent Host a dynamic, effective, and efficient enviro
 
 ### AI Agent Host Architecture Diagram
 
+In today's tech-driven world, containers play a crucial role in ensuring software consistency, scalability, and efficient deployment. Containers encapsulate an application with all of its dependencies, libraries, and configurations in one package, ensuring it runs consistently across various environments.  Here are the  containers integrated within the AI Agent Host framework:
+
+
 #### Containers
 
 1. **QuestDB**: QuestDB is a high-performance, open-source time-series database. It allows for efficient storage and querying of time-series data, making it ideal for working with real-time data streams.
