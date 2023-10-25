@@ -884,3 +884,53 @@ The `Readme.md` describes the process of setting up permissions within a Docker 
 
 The primary goal of these steps is to bridge the permission disparity between the Docker host and the Docker container. By replicating the group structures inside the container and ensuring the `coder` user is added to the correct groups, it guarantees that the application inside the container has the necessary permissions to interface with the specified devices.
 
+
+
+## `Readme.md` 
+
+### VSCode Configuration and Dockerfile
+
+
+When setting up a Docker container, especially for devices like I2C and UART interfaces, ensuring correct user permissions is crucial. The given segment of the `Readme.md` outlines steps to grant permissions from the Docker host to a user inside a container, specifically for the `coder` user who exists only within the Docker container.
+
+##### Steps:
+
+1. **On the Docker Host**:
+
+    - **I2C Interface**:
+        - To determine the group ID (`gid`) of the **/dev/i2c-1** device on your Docker host, execute:
+            ```bash
+            ls -ln /dev/i2c-1
+            ```
+        - The output, such as:
+            ```
+            crw-rw---- 1 0 123 89, 1 Aug 17 18:27 /dev/i2c-1
+            ```
+          indicates that `123` is the `gid` for the **/dev/i2c-1** device.
+
+    - **UART Interface**:
+        - Similarly, for the UART interface (specifically devices labeled `/dev/ttyUSB*`), run:
+            ```bash
+            ls -ln /dev/ttyUSB*
+            ```
+        - The output might be:
+            ```
+            crw-rw---- 1 root dialout 4, 64 Sep  5 17:34 /dev/ttyUSB*
+            ```
+          showing that the group associated with `/dev/ttyUSB*` devices is `dialout`.
+
+2. **In the Dockerfile**:
+
+    - Once you have identified the group ID (`gid`) from the Docker host, it's time to configure the Docker container.
+    - Given that the `coder` user is already embedded in the base image (specifically in `codercom/code-server`), you can:
+        1. Create a new group inside the Docker container using the identified `gid`.
+        2. Add the `coder` user to this new group.
+    - This is accomplished by modifying and adding these commands in the Dockerfile:
+        ```bash
+        # Replace 995 with the gid you found
+        RUN groupadd -g 995 i2cgroup
+        RUN usermod -aG i2cgroup coder
+        RUN usermod -aG dialout coder
+        ```
+
+The intention behind these steps is to bridge the permission gap between the Docker host and the Docker container. By mimicking the group structures and ensuring that the `coder` user is part of the right groups, we ensure that the containerized application has the correct permissions to access and interact with the specified devices.
