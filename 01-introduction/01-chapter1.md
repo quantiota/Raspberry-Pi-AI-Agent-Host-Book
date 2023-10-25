@@ -17,7 +17,7 @@ Finally, the AI Agent Host uses lightweight services like QuestDB and Grafana, s
 
 I hope this explanation helps simplify the concept of the AI Agent Host. If you have any further questions or if something is still unclear, feel free to ask!  
 
-## Features
+### Features
 
 The AI Agent Host, designed specifically for AI development, offers several key features making it an ideal solution for Raspberry Pi 4 with 8GB RAM, especially when running DietPi OS:
 
@@ -38,7 +38,7 @@ The AI Agent Host, designed specifically for AI development, offers several key 
 These features make the AI Agent Host a dynamic, effective, and efficient environment for AI development on a Raspberry Pi 4 with 8GB RAM, especially for projects involving real-time or sensor data.
 
 
-## AI Agent Host: A Novel Approach to Edge Computing
+### AI Agent Host: A Novel Approach to Edge Computing
 
 The AI Agent Host offers an innovative setup, connecting edge devices like the Raspberry Pi to a JupyterHub on a remote GPU server. This unique configuration, part of a broader trend known as edge computing, enables real-time data analysis and decision-making on the edge while offloading computationally intensive tasks to a GPU server in the cloud.
 
