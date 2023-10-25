@@ -52,9 +52,11 @@ In today's tech-driven world, containers play a crucial role in ensuring softwar
 
 4. **Nginx**: Nginx is a widely-used web server and reverse proxy server. It enhances the AI Agent Host by providing additional functionality for routing and load balancing, improving performance and security
 
-Visual Studio Code is remotely connected to a JupyterHub instance installed on a GPU server, providing access to Python, Julia and R kernels. 
 
  ![AI Agent Host diagram](/images/ai-agent-host-diagram.png)
+
+ Visual Studio Code is remotely connected to a JupyterHub instance installed on a GPU server, providing access to Python, Julia and R kernels. 
+
  
 :pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/BouarfaMahi/Raspberry-Pi-AI-Agent-Host-Book/main/images/ai-agent-host-diagram.png)
 
