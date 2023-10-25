@@ -56,7 +56,7 @@ In today's tech-driven world, containers play a crucial role in ensuring softwar
 
  ![AI Agent Host diagram](/images/ai-agent-host-diagram.png)
  
-:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/BouarfaMahi/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
+:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/BouarfaMahi/Raspberry-Pi-AI-Agent-Host-Book/images/ai-agent-host-diagram.png)
 
 Visual Studio Code is remotely connected to a JupyterHub instance installed on a GPU server, providing access to Python, Julia and R kernels. 
 
