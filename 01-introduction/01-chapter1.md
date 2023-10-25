@@ -73,9 +73,7 @@ As the AI industry continues to evolve rapidly, this innovative approach may bec
 
 Please note that while we strive to keep this document up-to-date, the field of AI is continuously evolving. For the latest information and developments, we recommend staying active in relevant online communities and keeping up with the latest research.
 
-# How to set up the AI Agent Host on Raspberry Pi
-
-## How to test
+## How to set up the AI Agent Host on Raspberry Pi
 
 The AI Agent Host was tested on DietPi installed on a Raspberry Pi 4 8GB. No other Linux distributions have been tested, but the instructions should be reasonably straightforward to adapt.
 
