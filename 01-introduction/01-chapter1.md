@@ -39,9 +39,21 @@ These features make the AI Agent Host a dynamic, effective, and efficient enviro
 
 ### AI Agent Host Architecture Diagram
 
+## Containers
+
+1. **QuestDB**: QuestDB is a high-performance, open-source time-series database. It allows for efficient storage and querying of time-series data, making it ideal for working with real-time data streams.
+
+2. **Grafana**: Grafana is a popular open-source platform for data visualization and monitoring. It provides a rich set of features for creating interactive dashboards and visualizing data from various sources.
+
+3. **Code-Server**: Code-Server is a web-based IDE based on Visual Studio Code. It provides a familiar coding environment with features such as code completion, syntax highlighting, and debugging capabilities.
+
+4. **Nginx**: Nginx is a widely-used web server and reverse proxy server. It enhances the AI Agent Host by providing additional functionality for routing and load balancing, improving performance and security
+
+
+
  ![AI Agent Host diagram](/images/ai-agent-host-diagram.png)
  
-:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/quantiota/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
+:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/BouarfaMahi/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
 
 
 
