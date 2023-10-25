@@ -39,7 +39,7 @@ These features make the AI Agent Host a dynamic, effective, and efficient enviro
 
 ### AI Agent Host Architecture Diagram
 
- ![AI Agent Host diagram](.images/ai-agent-host-diagram.png)
+ ![AI Agent Host diagram](images/ai-agent-host-diagram.png)
  
 :pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/quantiota/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
 
