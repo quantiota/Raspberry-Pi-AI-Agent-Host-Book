@@ -37,6 +37,14 @@ The AI Agent Host, designed specifically for AI development, offers several key 
 
 These features make the AI Agent Host a dynamic, effective, and efficient environment for AI development on a Raspberry Pi 4 with 8GB RAM, especially for projects involving real-time or sensor data.
 
+### AI Agent Host Architecture Diagram
+
+ ![AI Agent Host diagram](.images/ai-agent-host-diagram.png)
+ 
+:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/quantiota/Raspberry-Pi-AI-Agent-Host-Boook/images/ai-agent-host-diagram.png)
+
+
+
 
 ### AI Agent Host: A Novel Approach to Edge Computing
 
@@ -322,12 +330,6 @@ You can also run the existing notebooks in the project folder within VSCode.
 9. **What if I need help or support with the AI Agent Host?**
    There are active communities for both Raspberry Pi and AI Agent Host where you can expect robust support and resources for your AI development projects.
 
-
-### AI Agent Host Architecture Diagram
-
- ![AI Agent Host diagram](./ai-agent-host-diagram.png)
- 
-:pencil: High resolution diagram [Application architecture diagram](https://raw.githubusercontent.com/quantiota/Raspberry-Pi-AI-Agent-Host/master/ai-agent-host-diagram.png)
 
 
    ## References
