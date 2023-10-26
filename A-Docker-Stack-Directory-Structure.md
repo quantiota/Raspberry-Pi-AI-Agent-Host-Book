@@ -858,33 +858,6 @@ The `requirements.txt` file specifies the Python packages required for the appli
 In summary, this `requirements.txt` file lists out the Python packages needed for different applications, some of which are commented out and can be activated as needed based on the specific application requirements.
 
 
-## `README.md`
-
-
-### VSCode Configuration and Dockerfile
-
-The `Readme.md` describes the process of setting up permissions within a Docker container, especially when dealing with I2C and UART interfaces. The challenge here lies in ensuring correct user permissions because the `coder` user exists only within the Docker container.
-
-#### Steps:
-
-1. **On the Docker Host**:
-
-    - **I2C Interface**:
-        - The objective is to determine the group ID (`gid`) of the **/dev/i2c-1** device on your Docker host.
-
-    - **UART Interface**:
-        - Similarly, you'll need to identify the group associated with the UART interface, specifically devices labeled `/dev/ttyUSB*`.
-
-2. **In the Dockerfile**:
-
-    - After identifying the group ID (`gid`) from the Docker host, you'll need to modify the Docker container setup.
-    - Given that the `coder` user is a part of a pre-existing base image, the steps involve:
-        1. Creating a new group inside the Docker container using the identified `gid`.
-        2. Adding the `coder` user to this new group.
-
-The primary goal of these steps is to bridge the permission disparity between the Docker host and the Docker container. By replicating the group structures inside the container and ensuring the `coder` user is added to the correct groups, it guarantees that the application inside the container has the necessary permissions to interface with the specified devices.
-
-
 
 ## `Readme.md` 
 
